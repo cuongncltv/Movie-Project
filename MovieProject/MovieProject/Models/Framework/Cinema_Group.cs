@@ -1,5 +1,3 @@
-using System.ComponentModel;
-
 namespace MovieProject.Models.Framework
 {
     using System;
@@ -15,7 +13,6 @@ namespace MovieProject.Models.Framework
 
         [Required]
         [StringLength(50)]
-        [DisplayName("Cinema Group Name")]
         public string Group_Name { get; set; }
     }
 }
