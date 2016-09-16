@@ -465,27 +465,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Code\CustomMembershipProvider.cs" />
-    <Compile Include="Areas\Admin\Controllers\CinemaGroupController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Models\LoginModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountModel.cs" />
-    <Compile Include="Models\CinemaGroupModel.cs" />
-    <Compile Include="Models\CinemaModel.cs" />
-    <Compile Include="Models\Framework\Admins.cs" />
-    <Compile Include="Models\Framework\Cinemas.cs" />
-    <Compile Include="Models\Framework\Cinema_Group.cs" />
-    <Compile Include="Models\Framework\Customers.cs" />
-    <Compile Include="Models\Framework\MovieDbContext.cs" />
-    <Compile Include="Models\Framework\Movies.cs" />
-    <Compile Include="Models\Framework\Movie_Ratings.cs" />
-    <Compile Include="Models\Framework\News.cs" />
-    <Compile Include="Models\Framework\Seats.cs" />
-    <Compile Include="Models\Framework\Showings.cs" />
-    <Compile Include="Models\Framework\Showing_Schedule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -523,8 +508,6 @@
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_LeftMenu.cshtml" />
     <Content Include="Areas\Admin\Views\Login\Login.cshtml" />
-    <Content Include="Areas\Admin\Views\CinemaGroup\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\CinemaGroup\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -536,6 +519,13 @@
     <Folder Include="App_Data\" />
     <Folder Include="Assets\Client\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{dab64ac0-6f60-4577-acd2-49819d963e61}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
