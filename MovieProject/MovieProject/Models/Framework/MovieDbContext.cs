@@ -13,6 +13,7 @@ namespace MovieProject.Models.Framework
         }
 
         public virtual DbSet<Admins> Admins { get; set; }
+        public virtual DbSet<Cinema_Group> Cinema_Group { get; set; }
         public virtual DbSet<Cinemas> Cinemas { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
         public virtual DbSet<Movie_Ratings> Movie_Ratings { get; set; }

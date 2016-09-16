@@ -21,7 +21,7 @@ namespace MovieProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(LoginModel model)
+        public ActionResult Login(LoginModel model)
         {
             if (Membership.ValidateUser(model.Email, model.Password) && ModelState.IsValid)
             {

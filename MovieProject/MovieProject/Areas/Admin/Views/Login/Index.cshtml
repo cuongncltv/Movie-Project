@@ -22,7 +22,7 @@
 <body class="framed">
     <div class="wrapper">
         <div class="login">
-            @using (Html.BeginForm("Index","Login", FormMethod.Post, new { @class = "login__form" }))
+            @using (Html.BeginForm("Login","Login", FormMethod.Post, new { @class = "login__form" }))
             {
                 @Html.AntiForgeryToken()
                 <div class="login__logo"></div>

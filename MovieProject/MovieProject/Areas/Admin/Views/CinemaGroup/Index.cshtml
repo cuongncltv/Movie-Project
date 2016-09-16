@@ -1,0 +1,77 @@
+﻿@model IEnumerable<MovieProject.Models.Framework.Cinema_Group>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="main__scroll scrollbar-macosx">
+    <div class="main__cont">
+        <div class="main-heading">
+            <div class="main-title">
+                <ol class="breadcrumb">
+                    <li><a href="./">Cinema Group</a></li>
+                    <li class="active">Data Table</li>
+                </ol>
+            </div>
+            <div class="main-filter">
+                <form class="main-filter__search">
+                    <div class="input-group">
+                        <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
+                            <button type="button" class="btn btn-default">
+                                <div class="fa fa-search"></div>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container-fluid half-padding">
+            <div class="template template__table_data">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Thông tin chi tiết</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="container-fluid half-padding">
+
+                                    <p>
+                                        @Html.ActionLink("Create New Cinema Group", "Create")
+                                    </p>
+                                    <div id="buttons"></div><table id="example" class="table datatable display table-hover" cellspacing="0" width="100%">
+                                        <thead>
+                                        <tr>
+                                            <th>Cinema Group ID</th>
+                                            <th>Cinema Group Name</th>
+                                            <th>Control</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Group_ID)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Group_Name)
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Sửa", "Edit", new {id = item.Group_ID}) |
+                                                    @Html.ActionLink("Chi tiết", "Details", new {id = item.Group_ID}) |
+                                                    @Html.ActionLink("Xóa", "Delete", new {id = item.Group_ID})
+                                                </td>
+                                            </tr>
+                                        }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -32,6 +32,8 @@ namespace MovieProject.Models.Framework
         [StringLength(50)]
         public string Cinema_City { get; set; }
 
+        public int? Group_ID { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Seats> Seats { get; set; }
 
